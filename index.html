@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="郭才君大學部學業紀錄">
+  <title>郭才君｜大學部學業紀錄</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18212f;
+      --muted: #687386;
+      --line: #dde4ee;
+      --paper: #f7f8f5;
+      --panel: #ffffff;
+      --brand: #224e73;
+      --brand-2: #4a8b78;
+      --accent: #b85c38;
+      --soft: #eef4f6;
+      --shadow: 0 18px 45px rgba(24, 33, 47, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(34, 78, 115, 0.12), transparent 34%),
+        linear-gradient(315deg, rgba(74, 139, 120, 0.1), transparent 30%),
+        var(--paper);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 72vh;
+      display: grid;
+      align-items: center;
+      padding: 48px 0 22px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: var(--brand);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 2px;
+      background: var(--brand);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(2.35rem, 6vw, 5.2rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .identity-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 720px;
+      margin-top: 28px;
+    }
+
+    .identity-item {
+      min-height: 78px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 10px 22px rgba(24, 33, 47, 0.05);
+    }
+
+    .label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.3;
+    }
+
+    .value {
+      display: block;
+      margin-top: 4px;
+      font-weight: 800;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+
+    .portrait-panel {
+      position: relative;
+      min-height: 430px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background:
+        radial-gradient(circle at 25% 22%, rgba(255, 255, 255, 0.2), transparent 28%),
+        linear-gradient(145deg, rgba(34, 78, 115, 0.98), rgba(74, 139, 120, 0.92)),
+        var(--brand);
+    }
+
+    .portrait-panel::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 8px;
+      pointer-events: none;
+    }
+
+    .initials {
+      position: absolute;
+      left: 30px;
+      bottom: 28px;
+      color: #fff;
+    }
+
+    .initials strong {
+      display: block;
+      font-size: clamp(5.2rem, 12vw, 9rem);
+      line-height: 0.9;
+    }
+
+    .initials span {
+      display: block;
+      max-width: 260px;
+      margin-top: 12px;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    main {
+      padding: 0 0 72px;
+    }
+
+    section {
+      padding: 32px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.55rem, 3vw, 2.2rem);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stat-card,
+    .content-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 10px 26px rgba(24, 33, 47, 0.055);
+    }
+
+    .stat-card {
+      min-height: 124px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+    }
+
+    .stat-card b {
+      display: block;
+      margin-top: 8px;
+      font-size: 2.18rem;
+      line-height: 1.1;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 12px 30px rgba(24, 33, 47, 0.065);
+    }
+
+    table {
+      width: 100%;
+      min-width: 820px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--soft);
+      color: #233447;
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #fbfcfd;
+    }
+
+    tbody tr:hover {
+      background: #f3f8f8;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .grade {
+      display: inline-flex;
+      min-width: 48px;
+      justify-content: center;
+      padding: 4px 11px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--brand-2);
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .grade.warn {
+      background: var(--accent);
+    }
+
+    .grade.neutral {
+      background: #667085;
+    }
+
+    .content-card {
+      padding: 24px;
+    }
+
+    .bar-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr) 44px;
+      gap: 14px;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    .bar-track {
+      height: 10px;
+      border-radius: 999px;
+      background: #e8edf0;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+    }
+
+    .footer {
+      padding: 24px 0 42px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        min-height: auto;
+        padding-top: 28px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-panel {
+        min-height: 340px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page-shell {
+        width: min(100% - 22px, 1120px);
+      }
+
+      .identity-list,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .bar-row {
+        grid-template-columns: 82px minmax(0, 1fr) 40px;
+        font-size: 0.92rem;
+      }
+
+      .initials strong {
+        font-size: 4.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="page-shell hero-grid">
+      <div>
+        <p class="eyebrow">學業紀錄</p>
+        <h1>郭才君 大學部學業紀錄</h1>
+        <div class="identity-list" aria-label="學生基本資料">
+          <div class="identity-item">
+            <span class="label">姓名</span>
+            <span class="value">郭才君</span>
+          </div>
+          <div class="identity-item">
+            <span class="label">學校 / 系所</span>
+            <span class="value">輔仁大學 數學系資訊數學組</span>
+          </div>
+          <div class="identity-item">
+            <span class="label">學院 / 組別</span>
+            <span class="value">理工學院 資訊數學組</span>
+          </div>
+          <div class="identity-item">
+            <span class="label">身分</span>
+            <span class="value">畢業生</span>
+          </div>
+        </div>
+      </div>
+      <div class="portrait-panel" aria-label="總通過學分摘要">
+        <div class="initials">
+          <strong>136</strong>
+          <span>總通過學分</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section aria-labelledby="summary-title">
+      <div class="section-heading">
+        <h2 id="summary-title">學業摘要</h2>
+      </div>
+      <div class="stats">
+        <article class="stat-card">
+          <span class="label">總通過學分</span>
+          <b>136</b>
+        </article>
+        <article class="stat-card">
+          <span class="label">學業總平均</span>
+          <b>62.93</b>
+        </article>
+        <article class="stat-card">
+          <span class="label">GPA</span>
+          <b>2.19</b>
+        </article>
+        <article class="stat-card">
+          <span class="label">畢業狀態</span>
+          <b>畢業</b>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="grades-title">
+      <div class="section-heading">
+        <h2 id="grades-title">修課紀錄</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>學年學期</th>
+              <th>修課別</th>
+              <th>類別</th>
+              <th>課程名稱</th>
+              <th>學分</th>
+              <th>成績 / 領域</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>114-2</td>
+              <td>一般學期</td>
+              <td>通識</td>
+              <td>時事法律</td>
+              <td>2</td>
+              <td><span class="grade">60</span> 社會科學領域:法律類</td>
+            </tr>
+            <tr>
+              <td>114-2</td>
+              <td>一般學期</td>
+              <td>通識</td>
+              <td>國際關係與亞太現勢</td>
+              <td>2</td>
+              <td><span class="grade warn">41</span> 社會科學領域:政治</td>
+            </tr>
+            <tr>
+              <td>114-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>代數學(二)</td>
+              <td>3</td>
+              <td><span class="grade">60</span></td>
+            </tr>
+            <tr>
+              <td>114-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>數位邏輯設計</td>
+              <td>3</td>
+              <td><span class="grade">61</span></td>
+            </tr>
+            <tr>
+              <td>114-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>行動裝置程式設計</td>
+              <td>3</td>
+              <td><span class="grade">81</span></td>
+            </tr>
+            <tr>
+              <td>114-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>開始學數學</td>
+              <td>3</td>
+              <td><span class="grade warn">20</span></td>
+            </tr>
+            <tr>
+              <td>114-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>環境美學</td>
+              <td>2</td>
+              <td><span class="grade">87</span></td>
+            </tr>
+            <tr>
+              <td>114-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>數學物理入門(四)</td>
+              <td>2</td>
+              <td><span class="grade">79</span> 英-專業</td>
+            </tr>
+            <tr>
+              <td>114-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>設計思考與創新</td>
+              <td>2</td>
+              <td><span class="grade">87</span></td>
+            </tr>
+            <tr>
+              <td>114-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>臨床醫學概論</td>
+              <td>3</td>
+              <td><span class="grade">72</span></td>
+            </tr>
+            <tr>
+              <td>114-1</td>
+              <td>一般學期</td>
+              <td>通識</td>
+              <td>室內設計與家具欣賞</td>
+              <td>2</td>
+              <td><span class="grade">72</span> 人文藝術領域:生活藝術</td>
+            </tr>
+            <tr>
+              <td>114-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>演算法</td>
+              <td>3</td>
+              <td><span class="grade">78</span></td>
+            </tr>
+            <tr>
+              <td>114-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>網路概論</td>
+              <td>3</td>
+              <td><span class="grade warn">41</span></td>
+            </tr>
+            <tr>
+              <td>114-1</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>計算機組織</td>
+              <td>3</td>
+              <td><span class="grade warn">停修</span></td>
+            </tr>
+            <tr>
+              <td>114-1</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>數學物理入門(三)</td>
+              <td>2</td>
+              <td><span class="grade">81</span> 英-專業</td>
+            </tr>
+            <tr>
+              <td>114-1</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>全民國防教育軍事訓練-防衛動員</td>
+              <td>2</td>
+              <td><span class="grade">81</span></td>
+            </tr>
+            <tr>
+              <td>114-1</td>
+              <td>暑修</td>
+              <td>通識</td>
+              <td>心靈樂活電影院</td>
+              <td>2</td>
+              <td><span class="grade">通過</span> 社會科學領域:教育與心理</td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>通識</td>
+              <td>設計與藝術文化賞析</td>
+              <td>2</td>
+              <td><span class="grade">89</span> 人文藝術領域:視覺藝術</td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>資料結構</td>
+              <td>3</td>
+              <td><span class="grade">65</span></td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>人工智慧概論</td>
+              <td>3</td>
+              <td><span class="grade">60</span></td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>統計學</td>
+              <td>3</td>
+              <td><span class="grade">60</span></td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>高等微積分(二)</td>
+              <td>4</td>
+              <td><span class="grade">60</span></td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>外國語文(初級英文)</td>
+              <td>2</td>
+              <td><span class="grade">70</span> 2(學年)</td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>TRX懸吊訓練</td>
+              <td>0</td>
+              <td><span class="grade neutral">89</span></td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>作業系統</td>
+              <td>3</td>
+              <td><span class="grade">62</span></td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>智慧零售</td>
+              <td>2</td>
+              <td><span class="grade">82</span></td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>基礎人體醫學概論</td>
+              <td>3</td>
+              <td><span class="grade">88</span></td>
+            </tr>
+            <tr>
+              <td>113-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>全民國防教育軍事訓練-國防科技</td>
+              <td>2</td>
+              <td><span class="grade">88</span></td>
+            </tr>
+            <tr>
+              <td>113-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>機率論</td>
+              <td>3</td>
+              <td><span class="grade">60</span></td>
+            </tr>
+            <tr>
+              <td>113-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>圖論</td>
+              <td>3</td>
+              <td><span class="grade">90</span></td>
+            </tr>
+            <tr>
+              <td>113-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>科學計算</td>
+              <td>3</td>
+              <td><span class="grade">63</span></td>
+            </tr>
+            <tr>
+              <td>113-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>演算法</td>
+              <td>3</td>
+              <td><span class="grade warn">50</span></td>
+            </tr>
+            <tr>
+              <td>113-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>離散數學</td>
+              <td>3</td>
+              <td><span class="grade">60</span></td>
+            </tr>
+            <tr>
+              <td>113-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>專業倫理-科技倫理</td>
+              <td>2</td>
+              <td><span class="grade">86</span></td>
+            </tr>
+            <tr>
+              <td>113-1</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>數學物理入門(一)</td>
+              <td>2</td>
+              <td><span class="grade">78</span> 英-專業</td>
+            </tr>
+            <tr>
+              <td>113-1</td>
+              <td>一般學期</td>
+              <td>輔系</td>
+              <td>電子學(一)</td>
+              <td>3</td>
+              <td><span class="grade warn">停修</span></td>
+            </tr>
+            <tr>
+              <td>113-1</td>
+              <td>一般學期</td>
+              <td>輔系</td>
+              <td>程式設計(一)</td>
+              <td>3</td>
+              <td><span class="grade">65</span></td>
+            </tr>
+            <tr>
+              <td>112-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>線性代數(二)</td>
+              <td>3</td>
+              <td><span class="grade">60</span></td>
+            </tr>
+            <tr>
+              <td>112-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>高等微積分(二)</td>
+              <td>4</td>
+              <td><span class="grade warn">43</span></td>
+            </tr>
+            <tr>
+              <td>112-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>外國語文(中級英文閱讀)</td>
+              <td>2</td>
+              <td><span class="grade">71</span></td>
+            </tr>
+            <tr>
+              <td>112-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>統計學</td>
+              <td>3</td>
+              <td><span class="grade warn">46</span></td>
+            </tr>
+            <tr>
+              <td>112-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>人生哲學</td>
+              <td>2</td>
+              <td><span class="grade">86</span> 2(學年)</td>
+            </tr>
+            <tr>
+              <td>112-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>羽球</td>
+              <td>0</td>
+              <td><span class="grade neutral">66</span></td>
+            </tr>
+            <tr>
+              <td>112-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>資訊數學導論</td>
+              <td>2</td>
+              <td><span class="grade">62</span> 2(學年)</td>
+            </tr>
+            <tr>
+              <td>112-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>全民國防教育軍事訓練</td>
+              <td>0</td>
+              <td><span class="grade neutral">71</span> 2(學年)</td>
+            </tr>
+            <tr>
+              <td>112-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>Ｃ語言</td>
+              <td>3</td>
+              <td><span class="grade">81</span></td>
+            </tr>
+            <tr>
+              <td>112-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>流體力學簡介</td>
+              <td>2</td>
+              <td><span class="grade">81</span> 英-專業</td>
+            </tr>
+            <tr>
+              <td>112-1</td>
+              <td>一般學期</td>
+              <td>通識</td>
+              <td>電腦應用-商業資料庫管理</td>
+              <td>2</td>
+              <td><span class="grade warn">17</span> 自然科技領域:資訊科技</td>
+            </tr>
+            <tr>
+              <td>112-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>外國語文(中級科技英文)</td>
+              <td>2</td>
+              <td><span class="grade">70</span></td>
+            </tr>
+            <tr>
+              <td>112-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>高等微積分(一)</td>
+              <td>4</td>
+              <td><span class="grade">60</span></td>
+            </tr>
+            <tr>
+              <td>112-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>機率論</td>
+              <td>3</td>
+              <td><span class="grade warn">41</span></td>
+            </tr>
+            <tr>
+              <td>112-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>代數學(一)</td>
+              <td>3</td>
+              <td><span class="grade">60</span></td>
+            </tr>
+            <tr>
+              <td>112-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>人生哲學</td>
+              <td>2</td>
+              <td><span class="grade">84</span> 1(學年)</td>
+            </tr>
+            <tr>
+              <td>112-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>離散數學</td>
+              <td>3</td>
+              <td><span class="grade warn">32</span></td>
+            </tr>
+            <tr>
+              <td>112-1</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>資料庫</td>
+              <td>3</td>
+              <td><span class="grade">64</span></td>
+            </tr>
+            <tr>
+              <td>111-2</td>
+              <td>一般學期</td>
+              <td>通識</td>
+              <td>健康與生活</td>
+              <td>2</td>
+              <td><span class="grade">60</span> 自然科技領域:醫學類</td>
+            </tr>
+            <tr>
+              <td>111-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>國文</td>
+              <td>2</td>
+              <td><span class="grade">86</span> 2(學年)</td>
+            </tr>
+            <tr>
+              <td>111-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>線性代數(二)</td>
+              <td>3</td>
+              <td><span class="grade warn">8</span></td>
+            </tr>
+            <tr>
+              <td>111-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>程式設計(二)</td>
+              <td>3</td>
+              <td><span class="grade">81</span></td>
+            </tr>
+            <tr>
+              <td>111-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>體育</td>
+              <td>0</td>
+              <td><span class="grade neutral">89</span></td>
+            </tr>
+            <tr>
+              <td>111-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>全民國防教育軍事訓練</td>
+              <td>0</td>
+              <td><span class="grade warn">34</span> 2(學年)</td>
+            </tr>
+            <tr>
+              <td>111-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>微積分(二)</td>
+              <td>4</td>
+              <td><span class="grade">64</span></td>
+            </tr>
+            <tr>
+              <td>111-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>資訊數學導論</td>
+              <td>2</td>
+              <td><span class="grade warn">30</span> 2(學年)</td>
+            </tr>
+            <tr>
+              <td>111-2</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>外國語文(初級英文)</td>
+              <td>2</td>
+              <td><span class="grade warn">41</span> 2(學年)</td>
+            </tr>
+            <tr>
+              <td>111-2</td>
+              <td>一般學期</td>
+              <td>選修</td>
+              <td>Ｃ語言</td>
+              <td>3</td>
+              <td><span class="grade warn">38</span></td>
+            </tr>
+            <tr>
+              <td>111-1</td>
+              <td>一般學期</td>
+              <td>通識</td>
+              <td>電機電子概論</td>
+              <td>2</td>
+              <td><span class="grade">86</span> 自然科技領域:資訊科技</td>
+            </tr>
+            <tr>
+              <td>111-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>資訊數學導論</td>
+              <td>2</td>
+              <td><span class="grade">60</span> 1(學年)</td>
+            </tr>
+            <tr>
+              <td>111-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>全民國防教育軍事訓練</td>
+              <td>0</td>
+              <td><span class="grade neutral">67</span> 1(學年)</td>
+            </tr>
+            <tr>
+              <td>111-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>程式設計(一)</td>
+              <td>3</td>
+              <td><span class="grade">60</span></td>
+            </tr>
+            <tr>
+              <td>111-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>國文</td>
+              <td>2</td>
+              <td><span class="grade">67</span> 1(學年)</td>
+            </tr>
+            <tr>
+              <td>111-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>大學入門</td>
+              <td>2</td>
+              <td><span class="grade">71</span></td>
+            </tr>
+            <tr>
+              <td>111-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>外國語文(初級英文)</td>
+              <td>2</td>
+              <td><span class="grade">66</span> 1(學年)</td>
+            </tr>
+            <tr>
+              <td>111-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>線性代數(一)</td>
+              <td>3</td>
+              <td><span class="grade">61</span></td>
+            </tr>
+            <tr>
+              <td>111-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>體育</td>
+              <td>0</td>
+              <td><span class="grade">90</span></td>
+            </tr>
+            <tr>
+              <td>111-1</td>
+              <td>一般學期</td>
+              <td>必修</td>
+              <td>微積分(一)</td>
+              <td>4</td>
+              <td><span class="grade">62</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="details-title">
+      <div class="section-heading">
+        <h2 id="details-title">各學期通過學分</h2>
+      </div>
+      <article class="content-card">
+        <div class="bar-list" aria-label="各學期通過學分圖">
+          <div class="bar-row">
+            <span>111-1</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 74%"></div></div>
+            <strong>20</strong>
+          </div>
+          <div class="bar-row">
+            <span>111-2</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 41%"></div></div>
+            <strong>11</strong>
+          </div>
+          <div class="bar-row">
+            <span>112-1</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 52%"></div></div>
+            <strong>14</strong>
+          </div>
+          <div class="bar-row">
+            <span>112-2</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 52%"></div></div>
+            <strong>14</strong>
+          </div>
+          <div class="bar-row">
+            <span>113-1</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 70%"></div></div>
+            <strong>19</strong>
+          </div>
+          <div class="bar-row">
+            <span>113-2</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+            <strong>27</strong>
+          </div>
+          <div class="bar-row">
+            <span>114-1</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 41%"></div></div>
+            <strong>11</strong>
+          </div>
+          <div class="bar-row">
+            <span>114-2</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 74%"></div></div>
+            <strong>20</strong>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="page-shell">
+      郭才君 · 大學部學業紀錄
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
