@@ -257,6 +257,32 @@
       border-bottom: 0;
     }
 
+    tbody tr.info-related {
+      background: #eaf5ee;
+    }
+
+    tbody tr.info-related:hover {
+      background: #dceee2;
+    }
+
+    .info-note {
+      display: inline-block;
+      margin-left: 10px;
+      color: #316447;
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    .semester-table {
+      min-width: 420px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .semester-table th,
+    .semester-table td {
+      text-align: center;
+    }
+
     .grade {
       display: inline-flex;
       min-width: 48px;
@@ -418,6 +444,29 @@
       </div>
     </section>
 
+    <section aria-labelledby="semester-title">
+      <div class="section-heading">
+        <h2 id="semester-title">學期成績與名次</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="semester-table">
+          <thead>
+            <tr><th scope="col">學年度學期</th><th scope="col">名次</th><th scope="col">班級人數</th><th scope="col">學期平均</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1142</td><td>25</td><td>42</td><td>63.6</td></tr>
+            <tr><td>1141</td><td>16</td><td>42</td><td>68.75</td></tr>
+            <tr><td>1132</td><td>14</td><td>46</td><td>70.48</td></tr>
+            <tr><td>1131</td><td>17</td><td>45</td><td>67.82</td></tr>
+            <tr><td>1122</td><td>32</td><td>49</td><td>63.48</td></tr>
+            <tr><td>1121</td><td>30</td><td>50</td><td>53.32</td></tr>
+            <tr><td>1112</td><td>26</td><td>42</td><td>51</td></tr>
+            <tr><td>1111</td><td>18</td><td>46</td><td>65.55</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <section aria-labelledby="grades-title">
       <div class="section-heading">
         <h2 id="grades-title">修課紀錄</h2>
@@ -451,29 +500,29 @@
               <td>2</td>
               <td><span class="grade warn">41</span> 社會科學領域:政治</td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>114-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>代數學(二)</td>
               <td>3</td>
-              <td><span class="grade">60</span></td>
+              <td><span class="grade">60</span> <span class="info-note">資訊類相關</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>114-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>數位邏輯設計</td>
               <td>3</td>
-              <td><span class="grade">61</span></td>
+              <td><span class="grade">61</span> <span class="info-note">資訊類相關</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>114-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>行動裝置程式設計</td>
               <td>3</td>
-              <td><span class="grade">81</span></td>
+              <td><span class="grade">81</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>114-2</td>
@@ -523,13 +572,13 @@
               <td>2</td>
               <td><span class="grade">72</span> 人文藝術領域:生活藝術</td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>114-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>演算法</td>
               <td>3</td>
-              <td><span class="grade">78</span></td>
+              <td><span class="grade">78</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>114-1</td>
@@ -579,37 +628,37 @@
               <td>2</td>
               <td><span class="grade">89</span> 人文藝術領域:視覺藝術</td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>113-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>資料結構</td>
               <td>3</td>
-              <td><span class="grade">65</span></td>
+              <td><span class="grade">65</span> <span class="info-note">資訊類相關</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>113-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>人工智慧概論</td>
               <td>3</td>
-              <td><span class="grade">60</span></td>
+              <td><span class="grade">60</span> <span class="info-note">資訊類相關</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>113-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>統計學</td>
               <td>3</td>
-              <td><span class="grade">60</span></td>
+              <td><span class="grade">60</span> <span class="info-note">資訊類相關</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>113-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>高等微積分(二)</td>
               <td>4</td>
-              <td><span class="grade">60</span></td>
+              <td><span class="grade">60</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>113-2</td>
@@ -627,13 +676,13 @@
               <td>0</td>
               <td><span class="grade neutral">89</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>113-2</td>
               <td>一般學期</td>
               <td>選修</td>
               <td>作業系統</td>
               <td>3</td>
-              <td><span class="grade">62</span></td>
+              <td><span class="grade">62</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>113-2</td>
@@ -659,29 +708,29 @@
               <td>2</td>
               <td><span class="grade">88</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>113-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>機率論</td>
               <td>3</td>
-              <td><span class="grade">60</span></td>
+              <td><span class="grade">60</span> <span class="info-note">資訊類相關</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>113-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>圖論</td>
               <td>3</td>
-              <td><span class="grade">90</span></td>
+              <td><span class="grade">90</span> <span class="info-note">資訊類相關</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>113-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>科學計算</td>
               <td>3</td>
-              <td><span class="grade">63</span></td>
+              <td><span class="grade">63</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>113-1</td>
@@ -691,13 +740,13 @@
               <td>3</td>
               <td><span class="grade warn">50</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>113-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>離散數學</td>
               <td>3</td>
-              <td><span class="grade">60</span></td>
+              <td><span class="grade">60</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>113-1</td>
@@ -723,21 +772,21 @@
               <td>3</td>
               <td><span class="grade warn">停修</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>113-1</td>
               <td>一般學期</td>
               <td>輔系</td>
               <td>程式設計(一)</td>
               <td>3</td>
-              <td><span class="grade">65</span></td>
+              <td><span class="grade">65</span> <span class="info-note">資訊類相關</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>112-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>線性代數(二)</td>
               <td>3</td>
-              <td><span class="grade">60</span></td>
+              <td><span class="grade">60</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>112-2</td>
@@ -779,13 +828,13 @@
               <td>0</td>
               <td><span class="grade neutral">66</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>112-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>資訊數學導論</td>
               <td>2</td>
-              <td><span class="grade">62</span> 2(學年)</td>
+              <td><span class="grade">62</span> 2(學年) <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>112-2</td>
@@ -795,13 +844,13 @@
               <td>0</td>
               <td><span class="grade neutral">71</span> 2(學年)</td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>112-2</td>
               <td>一般學期</td>
               <td>選修</td>
               <td>Ｃ語言</td>
               <td>3</td>
-              <td><span class="grade">81</span></td>
+              <td><span class="grade">81</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>112-2</td>
@@ -827,13 +876,13 @@
               <td>2</td>
               <td><span class="grade">70</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>112-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>高等微積分(一)</td>
               <td>4</td>
-              <td><span class="grade">60</span></td>
+              <td><span class="grade">60</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>112-1</td>
@@ -843,13 +892,13 @@
               <td>3</td>
               <td><span class="grade warn">41</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>112-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>代數學(一)</td>
               <td>3</td>
-              <td><span class="grade">60</span></td>
+              <td><span class="grade">60</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>112-1</td>
@@ -867,13 +916,13 @@
               <td>3</td>
               <td><span class="grade warn">32</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>112-1</td>
               <td>一般學期</td>
               <td>選修</td>
               <td>資料庫</td>
               <td>3</td>
-              <td><span class="grade">64</span></td>
+              <td><span class="grade">64</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>111-2</td>
@@ -899,13 +948,13 @@
               <td>3</td>
               <td><span class="grade warn">8</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>111-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>程式設計(二)</td>
               <td>3</td>
-              <td><span class="grade">81</span></td>
+              <td><span class="grade">81</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>111-2</td>
@@ -923,13 +972,13 @@
               <td>0</td>
               <td><span class="grade warn">34</span> 2(學年)</td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>111-2</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>微積分(二)</td>
               <td>4</td>
-              <td><span class="grade">64</span></td>
+              <td><span class="grade">64</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>111-2</td>
@@ -955,21 +1004,21 @@
               <td>3</td>
               <td><span class="grade warn">38</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>111-1</td>
               <td>一般學期</td>
               <td>通識</td>
               <td>電機電子概論</td>
               <td>2</td>
-              <td><span class="grade">86</span> 自然科技領域:資訊科技</td>
+              <td><span class="grade">86</span> 自然科技領域:資訊科技 <span class="info-note">資訊類相關</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>111-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>資訊數學導論</td>
               <td>2</td>
-              <td><span class="grade">60</span> 1(學年)</td>
+              <td><span class="grade">60</span> 1(學年) <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>111-1</td>
@@ -979,13 +1028,13 @@
               <td>0</td>
               <td><span class="grade neutral">67</span> 1(學年)</td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>111-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>程式設計(一)</td>
               <td>3</td>
-              <td><span class="grade">60</span></td>
+              <td><span class="grade">60</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>111-1</td>
@@ -1011,13 +1060,13 @@
               <td>2</td>
               <td><span class="grade">66</span> 1(學年)</td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>111-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>線性代數(一)</td>
               <td>3</td>
-              <td><span class="grade">61</span></td>
+              <td><span class="grade">61</span> <span class="info-note">資訊類相關</span></td>
             </tr>
             <tr>
               <td>111-1</td>
@@ -1027,13 +1076,13 @@
               <td>0</td>
               <td><span class="grade">90</span></td>
             </tr>
-            <tr>
+            <tr class="info-related">
               <td>111-1</td>
               <td>一般學期</td>
               <td>必修</td>
               <td>微積分(一)</td>
               <td>4</td>
-              <td><span class="grade">62</span></td>
+              <td><span class="grade">62</span> <span class="info-note">資訊類相關</span></td>
             </tr>
           </tbody>
         </table>
